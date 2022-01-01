@@ -5,7 +5,19 @@ from typing import Generator
 
 
 class Node:
-    def __init__(self, data, next: Optional[Node] = None) -> Node:
+    """
+    A structure containing data, and (optionally) a pointer to another node.
+
+    Attributes:
+        data: the data stored in the node.
+        next: a pointer to another node.
+    
+    Methods:
+        __init__
+        __repr__
+    """
+
+    def __init__(self, data: Any, next: Optional[Node] = None) -> Node:
         """Initialise a node with the supplied data and next pointer."""
         self.data = data
         self.next = next
@@ -24,6 +36,26 @@ class Node:
 
 
 class LinkedList:
+    """
+    An implementation of a singly-linked list.
+
+    Attributes:
+        head: the first node in the list.
+    
+    Methods:
+        __init__
+        __repr__
+        __iter__
+        __getitem__
+        __setitem__
+        __len__
+        __eq__
+        insert
+        remove
+        append
+        prepend
+    """
+
     def __init__(self) -> LinkedList:
         """Initialise an empty linked list object."""
         self.head = None
