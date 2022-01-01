@@ -118,7 +118,7 @@ class Heap:
 
     def _parent(self, index: int):
         """
-        Return the value of the parent of the value at the given index.
+        Return the value of the parent of the given index.
 
         Arguments:
             index: the index of the value whose parent to return.
@@ -127,7 +127,7 @@ class Heap:
 
     def _left_child(self, index: int):
         """
-        Return the value of the right child of the value at the given index.
+        Return the value of the right child of the given index.
 
         Arguments:
             index: the index of the value whose right child to return.
@@ -136,7 +136,7 @@ class Heap:
 
     def _right_child(self, index: int):
         """
-        Return the value of the right child of the value at the given index.
+        Return the value of the right child of the given index.
 
         Arguments:
             index: the index of the value whose right child to return.
