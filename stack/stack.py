@@ -1,5 +1,6 @@
 from typing import Any
 
+
 class Stack:
     """
     Implementation of an array-based stack.
@@ -31,7 +32,7 @@ class Stack:
     def push(self, item: Any) -> None:
         """
         Add data to the stack (end of array).
-        
+
         Arguments:
             item: the data to add to the stack.
         """
@@ -40,7 +41,6 @@ class Stack:
     def pop(self) -> Any:
         """Remove the top-most item (at end of array) from the stack."""
         return self._items.pop()
-
 
     def top(self) -> Any:
         """Return the value at the top of the stack (end of array)."""
