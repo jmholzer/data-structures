@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import Any
 from typing import Optional
+from typing import Generator
 
 
 class Node:
@@ -36,7 +37,7 @@ class LinkedList:
             "LinkedList(" + ", ".join((str(node.data) for node in self)) + ")"
         )
 
-    def __iter__(self) -> Node:
+    def __iter__(self) -> Generator[Node, None, None]:
         """Turns the object into an iterable."""
         cursor = self.head
         while cursor:
