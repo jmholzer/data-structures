@@ -10,7 +10,7 @@ class Queue:
 
     Attributes:
         _items: a list (array) containing the data in the queue.
-    
+
     Methods:
         __init__
         __repr__
@@ -25,20 +25,24 @@ class Queue:
         """Initialise an empty queue."""
         self._items = []
 
+    def __len__(self) -> int:
+        """Calculate the length of the queue."""
+        return len(self._items)
+
     def __repr__(self) -> str:
         """Return a string representation of the queue object."""
         items_repr = ", ".join(repr(item) for item in self._items)
         return f"{self.__class__.__name__}({items_repr})"
 
     def __iter__(self) -> Generator[Any, None, None]:
-        """Return an generator for the queue object."""
+        """Return a generator for the queue."""
         for x in self._items:
             yield x
-    
+
     def __getitem__(self, key) -> Any:
         """
         Return the data at a specified index in the queue.
-        
+
         Arguments:
             key: the index from which to return data.
         """
@@ -47,7 +51,7 @@ class Queue:
     def enqueue(self, data) -> None:
         """
         Enqueue data at the back of the queue (head has index 0).
-        
+
         Arguments:
             key: the data to store in the queue
         """
@@ -59,7 +63,7 @@ class Queue:
         Head has index 0.
         """
         if self._items:
-            return(self._items.pop(0))
+            return self._items.pop(0)
 
     def front(self) -> Optional[Any]:
         """Return data at the front of the queue (head has index 0)."""
