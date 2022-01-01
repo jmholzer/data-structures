@@ -11,7 +11,7 @@ class Node:
     Attributes:
         data: the data stored in the node.
         next: a pointer to another node.
-    
+
     Methods:
         __init__
         __repr__
@@ -41,7 +41,7 @@ class LinkedList:
 
     Attributes:
         head: the first node in the list.
-    
+
     Methods:
         __init__
         __repr__
@@ -56,7 +56,7 @@ class LinkedList:
         prepend
     """
 
-    def __init__(self) -> LinkedList:
+    def __init__(self) -> None:
         """Initialise an empty linked list object."""
         self.head = None
 
@@ -65,12 +65,10 @@ class LinkedList:
         Return a String representation of the linked list.
         eval() will NOT construct an object.
         """
-        return (
-            "LinkedList(" + ", ".join((str(node.data) for node in self)) + ")"
-        )
+        return "LinkedList(" + ", ".join((str(node.data) for node in self)) + ")"
 
     def __iter__(self) -> Generator[Node, None, None]:
-        """Turns the object into an iterable."""
+        """Return a generator for the linked list."""
         cursor = self.head
         while cursor:
             yield cursor
