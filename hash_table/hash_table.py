@@ -53,7 +53,11 @@ class HashTable:
 
     Methods:
         __init__
-        __repr__
+        __getitem__
+        __setitem__
+        __delitem__
+        _rehash_needed
+        _rehash
     """
 
     def __init__(self):
